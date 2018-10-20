@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace MetroEcommerceApp.Migrations
 {
     [DbContext(typeof(MetroECommerceDbcontext))]
-    [Migration("20181020065231_Initial")]
+    [Migration("20181020071304_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
