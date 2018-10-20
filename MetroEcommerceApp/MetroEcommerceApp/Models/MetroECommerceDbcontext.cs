@@ -13,5 +13,11 @@ namespace MetroEcommerceApp.Models
         }
 
         public virtual DbSet<Category> Categories { get; set; }
+        public virtual DbSet<SubCategory> SubCategories { get; set; }
+        public virtual DbSet<Product> Products { get; set; }
+        public virtual DbSet<Brand> Brands { get; set; }
+        public virtual DbSet<Color> Colors { get; set; }
+        public virtual DbSet<ProductImages> ProductImages { get; set; }
+        public virtual DbSet<ProductColors> ProductColors { get; set; }
     }
 }
