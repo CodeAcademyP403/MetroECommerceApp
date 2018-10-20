@@ -10,7 +10,8 @@ namespace MetroEcommerceApp.Models
     {
         public MetroECommerceDbcontext(DbContextOptions<MetroECommerceDbcontext> dbContextOptions):base(dbContextOptions)
         {
-
         }
+
+        public virtual DbSet<Category> Categories { get; set; }
     }
 }
