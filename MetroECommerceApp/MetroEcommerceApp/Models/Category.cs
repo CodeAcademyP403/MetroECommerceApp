@@ -20,6 +20,10 @@ namespace MetroEcommerceApp.Models
         [Required]
         public string ActionName { get; set; }
         public string Icon { get; set; }
+
+        [Required]
+        public bool Visibility { get; set; }
+
         public IEnumerable<SubCategory> SubCategories { get; set; }
     }
 }

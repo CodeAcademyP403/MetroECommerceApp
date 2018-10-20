@@ -13,7 +13,11 @@ namespace MetroEcommerceApp.Models
         public string Name { get; set; }
         public string ControllerName { get; set; }
         public string ActionName { get; set; }
+
         public Category Category { get; set; }
         public int CategoryId { get; set; }
+
+        [Required]
+        public bool Visibility { get; set; }
     }
 }
