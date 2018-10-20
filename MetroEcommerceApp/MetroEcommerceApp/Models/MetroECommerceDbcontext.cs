@@ -10,7 +10,7 @@ namespace MetroEcommerceApp.Models
     {
         public MetroECommerceDbcontext(DbContextOptions<MetroECommerceDbcontext> dbContextOptions):base(dbContextOptions)
         {
-
+            
         }
     }
 }
