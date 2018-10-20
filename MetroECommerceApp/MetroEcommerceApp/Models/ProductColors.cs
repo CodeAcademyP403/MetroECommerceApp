@@ -5,8 +5,10 @@ using System.Threading.Tasks;
 
 namespace MetroEcommerceApp.Models
 {
-    public class ProductCategory
+    public class ProductColors
     {
         public int Id { get; set; }
+        public Product Product { get; set; }
+        public Color Color { get; set; }
     }
 }
