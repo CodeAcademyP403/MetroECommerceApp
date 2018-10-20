@@ -40,16 +40,12 @@ namespace MetroEcommerceApp.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("ActionName")
-                        .IsRequired();
-
-                    b.Property<string>("ControllerName")
-                        .IsRequired();
-
                     b.Property<string>("Icon");
 
                     b.Property<string>("Name")
                         .IsRequired();
+
+                    b.Property<string>("Path");
 
                     b.Property<bool>("Visibility");
 

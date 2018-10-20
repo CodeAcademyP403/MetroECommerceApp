@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace MetroEcommerceApp.Migrations
 {
     [DbContext(typeof(MetroECommerceDbcontext))]
-    [Migration("20181020073803_AddedVisibility")]
-    partial class AddedVisibility
+    [Migration("20181020083811_dadasd")]
+    partial class dadasd
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -42,16 +42,12 @@ namespace MetroEcommerceApp.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("ActionName")
-                        .IsRequired();
-
-                    b.Property<string>("ControllerName")
-                        .IsRequired();
-
                     b.Property<string>("Icon");
 
                     b.Property<string>("Name")
                         .IsRequired();
+
+                    b.Property<string>("Path");
 
                     b.Property<bool>("Visibility");
 

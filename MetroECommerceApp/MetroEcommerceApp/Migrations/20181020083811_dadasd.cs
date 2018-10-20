@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace MetroEcommerceApp.Migrations
 {
-    public partial class Initial : Migration
+    public partial class dadasd : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -13,7 +13,8 @@ namespace MetroEcommerceApp.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    Name = table.Column<string>(nullable: true)
+                    Name = table.Column<string>(nullable: true),
+                    Visibility = table.Column<bool>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -27,9 +28,9 @@ namespace MetroEcommerceApp.Migrations
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     Name = table.Column<string>(nullable: false),
-                    ControllerName = table.Column<string>(nullable: false),
-                    ActionName = table.Column<string>(nullable: false),
-                    Icon = table.Column<string>(nullable: true)
+                    Path = table.Column<string>(nullable: true),
+                    Icon = table.Column<string>(nullable: true),
+                    Visibility = table.Column<bool>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -42,7 +43,8 @@ namespace MetroEcommerceApp.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    Name = table.Column<string>(nullable: true)
+                    Name = table.Column<string>(nullable: true),
+                    Visibility = table.Column<bool>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -62,7 +64,8 @@ namespace MetroEcommerceApp.Migrations
                     RegularPrice = table.Column<decimal>(nullable: false),
                     SalesPrice = table.Column<decimal>(nullable: false),
                     Description = table.Column<string>(nullable: true),
-                    ThumbnailPath = table.Column<string>(nullable: true)
+                    ThumbnailPath = table.Column<string>(nullable: true),
+                    Visibility = table.Column<bool>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -90,7 +93,8 @@ namespace MetroEcommerceApp.Migrations
                     Name = table.Column<string>(nullable: false),
                     ControllerName = table.Column<string>(nullable: true),
                     ActionName = table.Column<string>(nullable: true),
-                    CategoryId = table.Column<int>(nullable: false)
+                    CategoryId = table.Column<int>(nullable: false),
+                    Visibility = table.Column<bool>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -110,7 +114,8 @@ namespace MetroEcommerceApp.Migrations
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     ProductId = table.Column<int>(nullable: true),
-                    ColorId = table.Column<int>(nullable: true)
+                    ColorId = table.Column<int>(nullable: true),
+                    Visibility = table.Column<bool>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -136,7 +141,8 @@ namespace MetroEcommerceApp.Migrations
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     ProductId = table.Column<int>(nullable: true),
-                    PhotoPath = table.Column<string>(nullable: true)
+                    PhotoPath = table.Column<string>(nullable: true),
+                    Visibility = table.Column<bool>(nullable: false)
                 },
                 constraints: table =>
                 {
