@@ -15,10 +15,7 @@ namespace MetroEcommerceApp.Models
         public int Id { get; set; }
         [Required]
         public string Name { get; set; }
-        [Required]
-        public string ControllerName { get; set; }
-        [Required]
-        public string ActionName { get; set; }
+        public string Path { get; set; }
         public string Icon { get; set; }
         public IEnumerable<SubCategory> SubCategories { get; set; }
     }
