@@ -25,6 +25,8 @@ namespace MetroEcommerceApp
         {
             services.AddMvc()
                   .SetCompatibilityVersion(Microsoft.AspNetCore.Mvc.CompatibilityVersion.Version_2_1);
+
+
             services.AddDbContext<MetroECommerceDbcontext>(entity =>
             {
                 entity.UseSqlServer(Configuration["ConnectionStrings:DefaultConnection"]);
