@@ -26,6 +26,10 @@ namespace MetroEcommerceApp
             {
                 app.UseDeveloperExceptionPage();
             }
+            app.UseStaticFiles();
+            app.UseHttpsRedirection();
+    
+            app.UseCookiePolicy();
 
             app.UseMvc();
         }
