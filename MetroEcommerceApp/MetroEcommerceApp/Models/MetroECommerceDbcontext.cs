@@ -19,5 +19,9 @@ namespace MetroEcommerceApp.Models
         public virtual DbSet<Color> Colors { get; set; }
         public virtual DbSet<ProductImages> ProductImages { get; set; }
         public virtual DbSet<ProductColors> ProductColors { get; set; }
+        public virtual DbSet<SKU> SKUs { get; set; }
+        public virtual DbSet<ProductSKUs> ProductSKUs { get; set; }
+
+
     }
 }

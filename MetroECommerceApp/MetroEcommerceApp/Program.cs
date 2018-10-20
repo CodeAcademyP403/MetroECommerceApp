@@ -43,10 +43,15 @@ namespace MetroEcommerceApp
 
 
 
+
                    
                         Brand dell = new Brand()
                         {
                             Name = "Dell"
+                        };
+                        Brand acer = new Brand()
+                        {
+                            Name = "Acer"
                         };
                         Brand hp = new Brand()
                         {
@@ -57,14 +62,49 @@ namespace MetroEcommerceApp
                             Name = "Polo"
                         };
 
-                        metroE.Brands.AddRange(dell, hp, polo);
+                        metroE.Brands.AddRange(dell, acer, hp, polo);
 
                         metroE.SaveChanges();
 
 
 
 
-                    
+
+
+
+                        SKU sku1 = new SKU()
+                        {
+                            Name="15.6",
+                            
+                        };
+                        SKU sku2 = new SKU()
+                        {
+                            Name = "L"
+                        };
+                        SKU sku3 = new SKU()
+                        {
+                            Name = "40"
+                        };
+                        SKU sku4 = new SKU()
+                        {
+                            Name = "41"
+                        };
+                        SKU sku5 = new SKU()
+                        {
+                            Name = "42"
+                        };
+
+                        metroE.SKUs.AddRange(sku1, sku2, sku3, sku4, sku5);
+
+                        metroE.SaveChanges();
+
+
+
+
+
+
+
+
                         Category Women = new Category()
                         {
                             Name="Women",
@@ -119,43 +159,113 @@ namespace MetroEcommerceApp
 
                         metroE.SaveChanges();
 
+
+
+
+
+
+                        
+
                         Product proDl = new Product()
                         {
-                            SerialNumber=545,
-                            BrandId = dell.Id,
-                            SKU="xl",
+                            SerialNumber=545,                           
+                            BrandId = dell.Id,              
                             RegularPrice=800,
                             SalesPrice=1000,
                             CategoryId=Computer.Id,
-                            Description="Default Information",
-                            ThumbnailPath="info"
+                            Description="Dell Computer",
+                            ThumbnailPath="dell.jpg",                          
                         };
                         Product proHP = new Product()
                         {
                             SerialNumber = 54,
-                            BrandId = dell.Id,
-                            SKU = "xl",
+                            BrandId = hp.Id,                         
                             RegularPrice = 900,
                             SalesPrice = 1200,
                             CategoryId = Computer.Id,
-                            Description = "Default Information",
-                            ThumbnailPath = "info"
+                            Description = "HP Computer",
+                            ThumbnailPath = "hp.jpg"
                         };
-                        Product ProPolo = new Product()
+                        Product proAcer = new Product()
                         {
                             SerialNumber = 55,
-                            BrandId = dell.Id,
-                            SKU = "xl",
+                            BrandId = acer.Id,
                             RegularPrice = 700,
                             SalesPrice = 1000,
                             CategoryId = Computer.Id,
-                            Description = "Default Information",
-                            ThumbnailPath = "info"
+                            Description = "Acer Computer",
+                            ThumbnailPath = "acer.jpg"
                         };
 
-                        metroE.Brands.AddRange(dell, hp, polo);
+                        metroE.Products.AddRange(proDl, proHP, proAcer);
 
                         metroE.SaveChanges();
+
+
+
+
+
+
+                        ProductSKUs ps1 = new ProductSKUs()
+                        {
+                            Product = proDl,
+                            Color = red,
+                            SKU = sku1,
+                            Count = 5
+
+                        };
+                        ProductSKUs ps2 = new ProductSKUs()
+                        {
+                            Product = proHP,
+                            Color = green,
+                            SKU = sku1,
+                            Count = 3
+
+                        };
+                        ProductSKUs ps3 = new ProductSKUs()
+                        {
+                            Product = proAcer,
+                            Color = blue,
+                            SKU = sku1,
+                            Count = 2
+
+                        };
+
+                        metroE.ProductSKUs.AddRange(ps1, ps2, ps3);
+
+                        metroE.SaveChanges();
+
+
+
+
+
+
+
+
+                        ProductColors pc1 = new ProductColors()
+                        {
+                            Product = proDl,
+                            Color = red
+
+                        };
+                        ProductColors pc2 = new ProductColors()
+                        {
+                            Product = proHP,
+                            Color = green
+
+                        };
+                        ProductColors pc3 = new ProductColors()
+                        {
+                            Product = proAcer,
+                            Color = blue
+
+                        };
+
+                        metroE.ProductColors.AddRange(pc1, pc2, pc3);
+
+                        metroE.SaveChanges();
+
+
                     }
                 }
             }

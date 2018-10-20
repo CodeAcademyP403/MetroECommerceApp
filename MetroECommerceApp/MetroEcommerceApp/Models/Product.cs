@@ -11,7 +11,6 @@ namespace MetroEcommerceApp.Models
         public int SerialNumber { get; set; }
         public Category Category { get; set; }
         public int CategoryId { get; set; }
-        public string SKU { get; set; }
         public Brand Brand { get; set; }
         public int BrandId { get; set; }
         public decimal RegularPrice { get; set; }
